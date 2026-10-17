@@ -6,17 +6,19 @@ import streamlit as st
 from inference import run_inference
 
 st.set_page_config(
-    page_title="FreshSense",
-    page_icon="🍌",
+    page_title="PREVIS --- Multimodal Banana Freshness & Spoilage AI Engine",
+    page_icon="",
     layout="wide"
 )
 
-st.title("🍌 FreshSense")
+st.title(" PREVIS")
 st.subheader("Predict food spoilage before it becomes visible")
 
 st.write(
-    "Upload an infrared image and enter sensor readings "
-    "to estimate the remaining time before spoilage thresholds."
+    "**PREVIS** is an experimental multimodal AI prototype for studying banana freshness "
+    "and spoilage progression using infrared-fusion images and environmental/gas-sensor measurements[cite: 1]. "
+    "The system combines visual patterns extracted from IR-fusion images with processed gas features and session metadata "
+    "to estimate spoilage risks and time-to-decay milestone thresholds (such as 50%, 75%, 90%, and 95% spoiled)[cite: 1]."
 )
 
 st.warning(
