@@ -313,21 +313,20 @@ http://localhost:8501
 ```
 
 
+## 9. Limitations, Honest Claims & Future Roadmap
 
-## 9. Limitations and Honest Claims
+### Current Limitations & Honest Claims
+PREVIS is an experimental research prototype with several key technical constraints:
+* **Dataset Constraints & Generalizability:** The prototype is trained on a limited dataset with a small number of specimens. Consequently, prediction accuracy may vary when evaluating different bananas under unconditioned or diverse environments, and results may not generalize beyond the specific dataset, imaging setup, storage conditions, or laboratory environment.
+* **Temperature & Calibration:** IR-fusion JPGs do not provide verified per-pixel temperatures without appropriate calibration, and ambient temperature sensors do not calibrate each pixel in an IR image.
+* **Feature Interpretations:** CNN embeddings are learned visual representations, not direct temperature, spoilage, or microbial measurements.
+* **Localization & Classification:** A pretrained ResNet18 does not automatically localize the banana or classify it as overripe, bruised, or spoiled. Localization requires a separate method, while quality classification requires relevant labeled data and a trained classifier.
+* **Milestone Estimates:** Accurate time-to-spoilage estimates require suitable labels, clear milestone definitions, and validation on distinct specimens.
+* **Robustness:** Model generalizability and robustness will be significantly enhanced in subsequent iterations as larger and more diverse training datasets are acquired.
 
-PREVIS is an experimental research prototype. Specifically: - IR-fusion
-JPGs do not provide verified per-pixel temperatures without appropriate
-calibration. - CNN embeddings are learned visual representations, not
-direct temperature, spoilage, or microbial measurements. - A pretrained
-ResNet18 does not automatically localize the banana or classify it as
-overripe, bruised, or spoiled. Localization requires a separate method;
-quality classification requires relevant labeled data and a trained
-classifier. - Ambient temperature sensors do not calibrate each pixel in
-an IR image. - Accurate time-to-spoilage estimates require suitable
-labels, clear milestone definitions, and validation on distinct
-specimens. - Results may not generalize beyond the dataset, imaging
-setup, storage conditions, or laboratory environment.
+### Future Scope & Expansion
+* **Multi-Fruit Scalability:** While the current iteration is focused exclusively on bananas, the underlying multimodal pipeline is designed to be modular. 
+* **Roadmap:** Future updates will adapt the feature architecture and parameters to support multiple different types of fruit, aiming to broaden the application scope, increase accuracy, and maximize overall model efficiency.
 
 ## 10. Summary
 
